@@ -27,7 +27,7 @@ Output: React + TypeScript + Vite + zmp-vite-plugin + zmp-ui + zmp-sdk
 | # | Phase | Trạng thái | Ước lượng |
 |---|---|---|---|
 | 01 | [Kiểm chứng ràng buộc + chốt đặc tả](phase-01-verify-constraints-and-spec.md) | ✅ Hoàn thành | 3–4 ngày |
-| 02 | [Lõi sinh code](phase-02-code-generator-core.md) | ⬜ Chưa làm | 4–5 ngày |
+| 02 | [Lõi sinh code](phase-02-code-generator-core.md) | ✅ Hoàn thành | 4–5 ngày |
 | 03 | [Thư viện block](phase-03-block-library.md) | ⬜ Chưa làm | 4–5 ngày |
 | 04 | [Giao diện builder](phase-04-builder-ui.md) | ⬜ Chưa làm | 4–5 ngày |
 | 05 | [Validator kiểm duyệt](phase-05-compliance-validator.md) | ⬜ Chưa làm | 2–3 ngày |

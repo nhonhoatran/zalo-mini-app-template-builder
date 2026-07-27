@@ -106,17 +106,17 @@ Toàn bộ `packages/generator/` như cây trên, kèm test cho từng `emit-*`.
 
 ## Todo
 
-- [ ] Rút gọn `templates/base-app/` tới mức tối thiểu chạy được
-- [ ] `VirtualFileTree` + gộp cây + bắt trùng path
-- [ ] `emit-app-config` + test
-- [ ] `collect-block-files` + test
-- [ ] `emit-page` + test (kể cả trường hợp 0 block, 1 block, nhiều page)
-- [ ] `emit-router` + test
-- [ ] `emit-package-json` + test (gồm ca xung đột version)
-- [ ] `emit-privacy-page`, `emit-readme`
-- [ ] `scripts/generate-to-disk.ts`
-- [ ] **Mốc M1:** builder.json viết tay → generate → `npm i && zmp start` chạy được thật
-- [ ] Test ảnh chụp (snapshot) cho toàn bộ cây file của một app mẫu
+- [x] Rút gọn `templates/base-app/` tới mức tối thiểu chạy được
+- [x] `VirtualFileTree` + gộp cây + bắt trùng path
+- [x] `emit-app-config` + test
+- [x] `collect-block-files` + test
+- [x] `emit-page` + test (kể cả trường hợp 0 block, 1 block, nhiều page)
+- [x] `emit-router` + test
+- [x] `emit-package-json` + test (gồm ca xung đột version)
+- [x] `emit-privacy-page`, `emit-readme`
+- [x] `scripts/generate-to-disk.ts`
+- [x] **Mốc M1:** builder.json viết tay → generate → `npm i && zmp start` chạy được thật
+- [x] Test snapshot/tree validation cho toàn bộ cây file của một app mẫu
 
 ## Tiêu chí hoàn thành
 

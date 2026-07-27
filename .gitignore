@@ -6,5 +6,6 @@ dist
 *.log
 temp_test_zmp
 temp_zaui_coffee
+output-app
 .idea
 .vscode
