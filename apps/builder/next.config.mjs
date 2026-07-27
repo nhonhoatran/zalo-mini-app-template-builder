@@ -6,6 +6,12 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: [
+    "@zalo-builder/blocks",
+    "@zalo-builder/schema",
+    "@zalo-builder/generator",
+    "@zalo-builder/compliance",
+  ],
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
