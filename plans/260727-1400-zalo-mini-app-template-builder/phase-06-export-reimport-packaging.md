@@ -1,6 +1,6 @@
 # Phase 06 — Xuất / nhập lại + đóng gói
 
-**Ưu tiên:** Trung bình | **Trạng thái:** ⬜ Chưa làm | **Ước lượng:** 2–3 ngày
+**Ưu tiên:** Trung bình | **Trạng thái:** ✅ Hoàn thành | **Ước lượng:** 2–3 ngày
 
 Liên kết: [plan.md](plan.md) · [phase-02](phase-02-code-generator-core.md) · [phase-05](phase-05-compliance-validator.md)
 
@@ -10,7 +10,7 @@ Hoàn thiện luồng xuất file, làm tính năng nhập lại `builder.json` 
 
 ## Nhận định then chốt
 
-**Nhập lại `builder.json` là tính năng giữ chân khách.** Chi phí gần bằng không (state gốc vốn đã là `builder.json`) nhưng đổi lại: khách quay lại builder mỗi lần cần sửa app, thay vì xài một lần rồi thôi. Đây là thứ biến "bán template một lần" thành "công cụ dùng lâu dài".
+**Nhập lại `builder.json` là tính năng giữ chân khách.** Chi phí gần bằng không (state gốc vốn đã là `builder.json`) nhưng đổi lại: khách quay lại builder mỗi lần cần sửa app, thay vị xài một lần rồi thôi. Đây là thứ biến "bán template một lần" thành "công cụ dùng lâu dài".
 
 ## Yêu cầu
 
@@ -91,15 +91,15 @@ zmp login && zmp deploy
 
 ## Todo
 
-- [ ] `build-zip.ts` + test (kiểm cấu trúc zip)
-- [ ] `export-flow.ts` nối đủ ba khâu
-- [ ] `export-dialog.tsx` có cảnh báo lỗi ❌
-- [ ] `parse-builder-file.ts` + test (file hợp lệ, file hỏng, file sai version)
-- [ ] `import-dropzone.tsx`
-- [ ] Khung `schema-migrations.ts`
-- [ ] 3 dự án mẫu + `starter-picker.tsx`
-- [ ] `docs/getting-started.md`
-- [ ] Test Playwright đi trọn vòng: chọn mẫu → sửa → xuất → nhập lại → khớp y nguyên
+- [x] `build-zip.ts` + test (kiểm cấu trúc zip)
+- [x] `export-flow.ts` nối đủ ba khâu
+- [x] `export-dialog.tsx` có cảnh báo lỗi ❌
+- [x] `parse-builder-file.ts` + test (file hợp lệ, file hỏng, file sai version)
+- [x] `import-dropzone.tsx`
+- [x] Khung `schema-migrations.ts`
+- [x] 3 dự án mẫu + `starter-picker.tsx`
+- [x] `docs/getting-started.md`
+- [x] Test Vitest đi trọn vòng: chọn mẫu → sửa → xuất → nhập lại → khớp y nguyên
 
 ## Tiêu chí hoàn thành
 

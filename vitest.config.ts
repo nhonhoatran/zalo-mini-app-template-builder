@@ -11,6 +11,7 @@ export default defineConfig({
       "@zalo-builder/schema": path.resolve(__dirname, "./packages/schema"),
       "@zalo-builder/blocks": path.resolve(__dirname, "./packages/blocks/src"),
       "@zalo-builder/generator": path.resolve(__dirname, "./packages/generator/src"),
+      "@zalo-builder/compliance": path.resolve(__dirname, "./packages/compliance/src"),
     },
   },
 });

@@ -31,7 +31,7 @@ Output: React + TypeScript + Vite + zmp-vite-plugin + zmp-ui + zmp-sdk
 | 03 | [Thư viện block](phase-03-block-library.md) | ✅ Hoàn thành | 4–5 ngày |
 | 04 | [Giao diện builder](phase-04-builder-ui.md) | ✅ Hoàn thành | 4–5 ngày |
 | 05 | [Validator kiểm duyệt](phase-05-compliance-validator.md) | ✅ Hoàn thành | 2–3 ngày |
-| 06 | [Xuất / nhập lại + đóng gói](phase-06-export-reimport-packaging.md) | ⬜ Chưa làm | 2–3 ngày |
+| 06 | [Xuất / nhập lại + đóng gói](phase-06-export-reimport-packaging.md) | ✅ Hoàn thành | 2–3 ngày |
 
 Tổng ~3–4 tuần cho MVP bán được.
 

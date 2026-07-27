@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "app": {
+    "name": "Nabi Beauty Spa and Salon",
+    "description": "Đặt lịch chăm sóc da, massage & làm đẹp chuyên nghiệp qua Zalo Mini App",
+    "primaryColor": "#db2777",
+    "oaId": "987654321098765432",
+    "locale": "vi"
+  },
+  "pages": [
+    {
+      "id": "page-home",
+      "title": "Trang chủ",
+      "path": "/",
+      "showInTabBar": true,
+      "icon": "zi-home",
+      "blocks": [
+        {
+          "id": "block-banner-spa",
+          "type": "banner",
+          "props": {
+            "title": "Gói Chăm Sóc Da Chuyên Sâu - Giảm 40%",
+            "imageUrl": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800",
+            "autoPlay": true,
+            "height": "medium"
+          }
+        },
+        {
+          "id": "block-services-spa",
+          "type": "service-price-list",
+          "props": {
+            "title": "Dịch Vụ Nổi Bật",
+            "services": [
+              {
+                "name": "Chăm Sóc Da Mặt Hàn Quốc",
+                "price": "350.000đ",
+                "note": "Liệu trình 60 phút làm sạch sâu, cấp ẩm"
+              },
+              {
+                "name": "Massage Body Đá Nóng",
+                "price": "490.000đ",
+                "note": "Liệu trình 90 phút thư giãn cơ thể"
+              },
+              {
+                "name": "Gội Đầu Dưỡng Sinh Thảo Dược",
+                "price": "199.000đ",
+                "note": "Liệu trình 45 phút kết hợp massage cổ vai gáy"
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-booking-spa",
+          "type": "booking-form",
+          "props": {
+            "title": "Đặt Lịch Hẹn Ngay",
+            "subtitle": "Chọn ngày giờ phù hợp, Nabi Spa sẽ gọi điện xác nhận trong 15 phút"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-contact",
+      "title": "Liên hệ",
+      "path": "/contact",
+      "showInTabBar": true,
+      "icon": "zi-call",
+      "blocks": [
+        {
+          "id": "block-contact-spa",
+          "type": "contact-info",
+          "props": {
+            "phone": "0987654321",
+            "email": "contact@nabispa.vn",
+            "address": "123 Đường Nam Kỳ Khởi Nghĩa, Q.3, TP.HCM",
+            "workingHours": "09:00 - 20:00 Hàng ngày"
+          }
+        },
+        {
+          "id": "block-policy-spa",
+          "type": "privacy-policy",
+          "props": {
+            "title": "Chính sách bảo mật & đặt lịch",
+            "content": "Nabi Spa cam kết bảo mật thông tin cá nhân. Quý khách vui lòng đến trước 10 phút so với giờ hẹn."
+          }
+        }
+      ]
+    }
+  ],
+  "permissions": ["userInfo", "phoneNumber"],
+  "generated": {
+    "at": "2026-07-27T10:00:00.000Z",
+    "builderVersion": "1.0.0"
+  }
+}

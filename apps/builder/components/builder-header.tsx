@@ -1,23 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
-import JSZip from "jszip";
-import { generateProject } from "@zalo-builder/generator";
-import { runComplianceCheck } from "@zalo-builder/compliance";
 import { useBuilderStore } from "../store/builder-store";
+import { runComplianceCheck } from "@zalo-builder/compliance";
 import { AppSettingsModal } from "./app-settings-modal";
 import { PageManager } from "./page-manager/page-manager";
 import { ComplianceModal } from "./compliance/compliance-modal";
+import { ExportDialog } from "./export-dialog";
+import { ImportDropzone } from "./import-dropzone";
+import { StarterPicker } from "./starter-picker";
 import {
   Undo2,
   Redo2,
   Download,
   Settings,
   RotateCcw,
-  CheckCircle2,
-  Loader2,
   ShieldCheck,
   ShieldAlert,
+  LayoutTemplate,
+  FileUp,
 } from "lucide-react";
 
 export function BuilderHeader() {
@@ -30,51 +31,11 @@ export function BuilderHeader() {
 
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isComplianceOpen, setIsComplianceOpen] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportSuccess, setExportSuccess] = useState(false);
+  const [isExportOpen, setIsExportOpen] = useState(false);
+  const [isImportOpen, setIsImportOpen] = useState(false);
+  const [isStarterOpen, setIsStarterOpen] = useState(false);
 
   const complianceReport = runComplianceCheck(config);
-
-  const handleExportZip = async () => {
-    try {
-      setIsExporting(true);
-
-      // 1. Generate Virtual File Tree
-      const tree = generateProject({ config });
-
-      // 2. Create JSZip
-      const zip = new JSZip();
-      for (const file of tree) {
-        zip.file(file.path, file.content);
-      }
-
-      // 3. Generate Blob & Download
-      const blob = await zip.generateAsync({ type: "blob" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-
-      // Safe filename
-      const safeName = config.app.name
-        .toLowerCase()
-        .replace(/[^a-z0-9]/g, "-")
-        .replace(/-+/g, "-");
-      a.download = `zalo-mini-app-${safeName || "project"}.zip`;
-
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-
-      setExportSuccess(true);
-      setTimeout(() => setExportSuccess(false), 3000);
-    } catch (err) {
-      console.error("Export zip error:", err);
-      alert("Trục trặc khi sinh project: " + (err as Error).message);
-    } finally {
-      setIsExporting(false);
-    }
-  };
 
   return (
     <>
@@ -118,8 +79,30 @@ export function BuilderHeader() {
           <PageManager />
         </div>
 
-        {/* Right: Actions (Compliance Check / Undo / Redo / Reset / Export) */}
+        {/* Right: Actions */}
         <div className="flex items-center gap-2">
+          {/* Button: Starters Modal */}
+          <button
+            type="button"
+            onClick={() => setIsStarterOpen(true)}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center gap-1.5 transition"
+            title="Chọn mẫu ứng dụng dựng sẵn"
+          >
+            <LayoutTemplate className="w-4 h-4 text-blue-600" />
+            <span>Mẫu dự án</span>
+          </button>
+
+          {/* Button: Import JSON */}
+          <button
+            type="button"
+            onClick={() => setIsImportOpen(true)}
+            className="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center gap-1.5 transition"
+            title="Nhập lại file builder.json để chỉnh sửa"
+          >
+            <FileUp className="w-4 h-4 text-emerald-600" />
+            <span>Nhập JSON</span>
+          </button>
+
           {/* Button: Compliance Check / Inspection */}
           <button
             type="button"
@@ -136,7 +119,7 @@ export function BuilderHeader() {
             ) : (
               <ShieldAlert className="w-4 h-4 text-rose-600" />
             )}
-            <span>Kiểm duyệt Zalo</span>
+            <span>Kiểm duyệt</span>
             <span
               className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
                 complianceReport.passed
@@ -148,6 +131,7 @@ export function BuilderHeader() {
             </span>
           </button>
 
+          {/* Undo / Redo */}
           <div className="flex items-center bg-slate-100 rounded-lg p-0.5 border border-slate-200">
             <button
               type="button"
@@ -172,7 +156,7 @@ export function BuilderHeader() {
           <button
             type="button"
             onClick={() => {
-              if (confirm("Anh có chắc muốn đặt lại builder về mặc định hông?")) {
+              if (confirm("Anh yêu có chắc muốn đặt lại builder về mặc định hông?")) {
                 resetToDefault();
               }
             }}
@@ -182,35 +166,24 @@ export function BuilderHeader() {
             <RotateCcw className="w-4 h-4" />
           </button>
 
+          {/* Button: Open Export Dialog */}
           <button
             type="button"
-            disabled={isExporting}
-            onClick={handleExportZip}
-            className={`px-4 py-1.5 rounded-lg text-xs font-semibold text-white flex items-center gap-2 shadow-sm transition ${
-              exportSuccess
-                ? "bg-emerald-600 hover:bg-emerald-700"
-                : "bg-blue-600 hover:bg-blue-700 active:scale-95"
-            }`}
+            onClick={() => setIsExportOpen(true)}
+            className="px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-95 flex items-center gap-2 shadow-sm transition"
           >
-            {isExporting ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" /> Đang đóng gói...
-              </>
-            ) : exportSuccess ? (
-              <>
-                <CheckCircle2 className="w-4 h-4" /> Đã tải ZIP!
-              </>
-            ) : (
-              <>
-                <Download className="w-4 h-4" /> Xuất File ZIP
-              </>
-            )}
+            <Download className="w-4 h-4" />
+            <span>Xuất File ZIP</span>
           </button>
         </div>
       </header>
 
       <AppSettingsModal isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} />
       <ComplianceModal isOpen={isComplianceOpen} onClose={() => setIsComplianceOpen(false)} />
+      <ExportDialog isOpen={isExportOpen} onClose={() => setIsExportOpen(false)} />
+      <ImportDropzone isOpen={isImportOpen} onClose={() => setIsImportOpen(false)} />
+      <StarterPicker isOpen={isStarterOpen} onClose={() => setIsStarterOpen(false)} />
     </>
   );
 }
+

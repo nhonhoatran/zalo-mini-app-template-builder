@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "app": {
+    "name": "Urban Fashion Shop",
+    "description": "Cửa hàng thời trang nam nữ phong cách hiện đại trên Zalo Mini App",
+    "primaryColor": "#0f766e",
+    "oaId": "555666777888999000",
+    "locale": "vi"
+  },
+  "pages": [
+    {
+      "id": "page-home",
+      "title": "Trang chủ",
+      "path": "/",
+      "showInTabBar": true,
+      "icon": "zi-home",
+      "blocks": [
+        {
+          "id": "block-banner-retail",
+          "type": "banner",
+          "props": {
+            "title": "Bộ Sưu Tập Mùa Hè 2026 - Hot Sale",
+            "imageUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+            "autoPlay": true,
+            "height": "large"
+          }
+        },
+        {
+          "id": "block-products-retail",
+          "type": "product-list",
+          "props": {
+            "title": "Sản Phẩm Bán Chạy",
+            "products": [
+              {
+                "id": "prod-ret-1",
+                "name": "Áo Sơ Mi Linen Premium",
+                "price": "380.000đ",
+                "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400",
+                "category": "Áo Nam"
+              },
+              {
+                "id": "prod-ret-2",
+                "name": "Đầm Dáng Xòe Vintage",
+                "price": "520.000đ",
+                "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400",
+                "category": "Đầm Nữ"
+              },
+              {
+                "id": "prod-ret-3",
+                "name": "Quần Jeans Slimfit",
+                "price": "450.000đ",
+                "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400",
+                "category": "Quần Nam"
+              },
+              {
+                "id": "prod-ret-4",
+                "name": "Áo Khoác Blazer Hàn Quốc",
+                "price": "680.000đ",
+                "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400",
+                "category": "Áo Khoác"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-cart",
+      "title": "Giỏ hàng",
+      "path": "/cart",
+      "showInTabBar": true,
+      "icon": "zi-cart",
+      "blocks": [
+        {
+          "id": "block-cart-retail",
+          "type": "cart-button",
+          "props": {
+            "title": "Thanh Toán Đơn Hàng",
+            "buttonText": "Tiến hành thanh toán",
+            "itemCount": 3,
+            "totalPrice": "1.350.000đ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-info",
+      "title": "Cửa hàng",
+      "path": "/info",
+      "showInTabBar": true,
+      "icon": "zi-location",
+      "blocks": [
+        {
+          "id": "block-contact-retail",
+          "type": "contact-info",
+          "props": {
+            "phone": "0988776655",
+            "email": "support@urbanfashion.vn",
+            "address": "456 Đường Lê Văn Sỹ, Phường 14, Quận 3, TP.HCM",
+            "workingHours": "09:00 - 21:30 Hàng ngày"
+          }
+        },
+        {
+          "id": "block-policy-retail",
+          "type": "privacy-policy",
+          "props": {
+            "title": "Chính sách đổi trả trong 7 ngày",
+            "content": "Hỗ trợ đổi size và đổi mẫu miễn phí trong 7 ngày với sản phẩm còn nguyên tem mác."
+          }
+        }
+      ]
+    }
+  ],
+  "permissions": [],
+  "generated": {
+    "at": "2026-07-27T10:00:00.000Z",
+    "builderVersion": "1.0.0"
+  }
+}

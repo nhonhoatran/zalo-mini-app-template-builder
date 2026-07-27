@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "app": {
+    "name": "Highland Coffee and Tea",
+    "description": "Đặt đồ uống giao hàng tận nơi & tích điểm thành viên qua Zalo Mini App",
+    "primaryColor": "#b91c1c",
+    "oaId": "123456789012345678",
+    "locale": "vi"
+  },
+  "pages": [
+    {
+      "id": "page-home",
+      "title": "Trang chủ",
+      "path": "/",
+      "showInTabBar": true,
+      "icon": "zi-home",
+      "blocks": [
+        {
+          "id": "block-banner-coffee",
+          "type": "banner",
+          "props": {
+            "title": "Ưu đãi 30% cho thành viên Zalo",
+            "imageUrl": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800",
+            "autoPlay": true,
+            "height": "medium"
+          }
+        },
+        {
+          "id": "block-rich-text-intro",
+          "type": "rich-text",
+          "props": {
+            "content": "### ☕ Thưởng thức Cà Phê Chuẩn Vị\nChào mừng anh chị đến với **Highland Coffee & Tea**. Đặt nước ngay để nhận ưu đãi giao nhanh trong 30 phút!",
+            "align": "center"
+          }
+        },
+        {
+          "id": "block-products-coffee",
+          "type": "product-list",
+          "props": {
+            "title": "Menu Đồ Uống Nổi Bật",
+            "products": [
+              {
+                "id": "prod-1",
+                "name": "Cà Phê Sữa Đá",
+                "price": "29.000đ",
+                "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400",
+                "category": "Cà Phê"
+              },
+              {
+                "id": "prod-2",
+                "name": "Trà Đào Cam Sả",
+                "price": "39.000đ",
+                "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400",
+                "category": "Trà Trái Cây"
+              },
+              {
+                "id": "prod-3",
+                "name": "Bạc Xỉu Đá",
+                "price": "32.000đ",
+                "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400",
+                "category": "Cà Phê"
+              },
+              {
+                "id": "prod-4",
+                "name": "Trà Sen Vàng",
+                "price": "42.000đ",
+                "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400",
+                "category": "Trà Trái Cây"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-cart",
+      "title": "Giỏ hàng",
+      "path": "/cart",
+      "showInTabBar": true,
+      "icon": "zi-cart",
+      "blocks": [
+        {
+          "id": "block-cart-coffee",
+          "type": "cart-button",
+          "props": {
+            "title": "Thanh Toán Đơn Hàng",
+            "buttonText": "Xem giỏ hàng (2 sản phẩm)",
+            "itemCount": 2,
+            "totalPrice": "68.000đ"
+          }
+        }
+      ]
+    },
+    {
+      "id": "page-contact",
+      "title": "Liên hệ",
+      "path": "/contact",
+      "showInTabBar": true,
+      "icon": "zi-call",
+      "blocks": [
+        {
+          "id": "block-contact-coffee",
+          "type": "contact-info",
+          "props": {
+            "phone": "19001234",
+            "email": "cskh@highlandcoffee.vn",
+            "address": "78 Lô B, Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM",
+            "workingHours": "07:00 - 22:30 Hàng ngày"
+          }
+        },
+        {
+          "id": "block-policy-coffee",
+          "type": "privacy-policy",
+          "props": {
+            "title": "Chính sách đổi trả & giao hàng",
+            "content": "Giao hàng tận nơi trong bán kính 5km. Cam kết đồ uống nguyên vị, hoàn tiền 100% nếu sản phẩm bị hư hỏng trong quá trình vận chuyển."
+          }
+        }
+      ]
+    }
+  ],
+  "permissions": [],
+  "generated": {
+    "at": "2026-07-27T10:00:00.000Z",
+    "builderVersion": "1.0.0"
+  }
+}
