@@ -11,8 +11,8 @@ output-app
 .vscode
 
 # AI / IDE Agent folders
-.agent
-.agents
-.opencode
-.claude
-.cursor
+.agent/
+.agents/
+.opencode/
+.claude/
+.cursor/
