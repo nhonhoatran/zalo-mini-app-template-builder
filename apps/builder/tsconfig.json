@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "zmp-ui": ["../../packages/blocks/src/shared/mock-zmp-ui.tsx"],
+      "@zalo-builder/schema": ["../../packages/schema"],
+      "@zalo-builder/blocks": ["../../packages/blocks"],
+      "@zalo-builder/generator": ["../../packages/generator"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../packages/blocks/src/declarations.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -25,7 +25,7 @@ export function collectBlockFiles(builderConfig: BuilderConfig): {
   const files: VirtualFileTree = [];
   const dependencies: Record<string, string> = {};
 
-  for (const blockType of usedTypes) {
+  for (const blockType of Array.from(usedTypes)) {
     const manifest = BLOCK_REGISTRY[blockType];
     if (manifest) {
       files.push({
