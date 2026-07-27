@@ -12,8 +12,9 @@
     "isolatedModules": true,
     "paths": {
       "@zalo-builder/schema": ["./packages/schema"],
-      "@zalo-builder/blocks": ["./packages/blocks"]
+      "@zalo-builder/blocks": ["./packages/blocks"],
+      "@zalo-builder/generator": ["./packages/generator"]
     }
   },
-  "include": ["packages/**/*"]
+  "include": ["packages/**/*", "apps/**/*"]
 }

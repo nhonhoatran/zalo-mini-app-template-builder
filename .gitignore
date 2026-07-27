@@ -9,3 +9,10 @@ temp_zaui_coffee
 output-app
 .idea
 .vscode
+
+# AI / IDE Agent folders
+.agent
+.agents
+.opencode
+.claude
+.cursor

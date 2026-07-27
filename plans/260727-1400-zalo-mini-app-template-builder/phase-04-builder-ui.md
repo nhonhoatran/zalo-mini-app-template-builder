@@ -1,6 +1,6 @@
 # Phase 04 — Giao diện builder
 
-**Ưu tiên:** Cao | **Trạng thái:** ⬜ Chưa làm | **Ước lượng:** 4–5 ngày
+**Ưu tiên:** Cao | **Trạng thái:** ✅ Hoàn thành | **Ước lượng:** 4–5 ngày
 
 Liên kết: [plan.md](plan.md) · [phase-02](phase-02-code-generator-core.md) · [phase-03](phase-03-block-library.md)
 
@@ -93,19 +93,19 @@ Bố cục màn hình:
 
 ## Todo
 
-- [ ] Dựng Next.js + Tailwind + shadcn/ui, layout ba cột
-- [ ] `builder-store.ts` + test cho các hành động (thêm/xoá/đổi chỗ/sửa props)
-- [ ] `block-palette` đọc registry
-- [ ] `phone-frame` + render block thật trong đó
-- [ ] Kéo thả bằng dnd-kit (từ palette vào canvas + sắp xếp trong canvas)
-- [ ] `schema-form` — field text, số, bool
-- [ ] `schema-form` — field màu, ảnh, chọn, mảng
-- [ ] Quản lý nhiều trang + thanh tab
-- [ ] Tự lưu localStorage
-- [ ] Undo/redo
-- [ ] Nút Xuất file nối vô generator
-- [ ] **Mốc M2** đạt
-- [ ] Test store bằng Vitest; test luồng kéo thả bằng Playwright
+- [x] Dựng Next.js + Tailwind + shadcn/ui, layout ba cột
+- [x] `builder-store.ts` + test cho các hành động (thêm/xoá/đổi chỗ/sửa props)
+- [x] `block-palette` đọc registry
+- [x] `phone-frame` + render block thật trong đó
+- [x] Kéo thả bằng dnd-kit (từ palette vào canvas + sắp xếp trong canvas)
+- [x] `schema-form` — field text, số, bool
+- [x] `schema-form` — field màu, ảnh, chọn, mảng
+- [x] Quản lý nhiều trang + thanh tab
+- [x] Tự lưu localStorage
+- [x] Undo/redo
+- [x] Nút Xuất file nối vô generator
+- [x] **Mốc M2** đạt
+- [x] Test store bằng Vitest; test luồng kéo thả bằng Playwright
 
 ## Tiêu chí hoàn thành
 
