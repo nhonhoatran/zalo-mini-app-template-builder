@@ -1,6 +1,6 @@
 # Phase 03 — Thư viện block
 
-**Ưu tiên:** Cao | **Trạng thái:** ⬜ Chưa làm | **Ước lượng:** 4–5 ngày
+**Ưu tiên:** Cao | **Trạng thái:** ✅ Đã hoàn thành (2026-07-27) | **Ước lượng:** 4–5 ngày
 
 Liên kết: [plan.md](plan.md) · [phase-01](phase-01-verify-constraints-and-spec.md) · [phase-02](phase-02-code-generator-core.md)
 
@@ -103,15 +103,15 @@ export const bannerManifest: BlockManifest = {
 
 ## Todo
 
-- [ ] `BlockManifest` + `registry.ts` + test
-- [ ] `zalo-bridge.ts` bản thật + bản mock
-- [ ] Block `banner` trọn gói (làm mẫu cho phần còn lại)
-- [ ] `rich-text`, `image-gallery`, `contact-info`, `map-location`
-- [ ] `product-list`, `product-detail`, `cart-button`
-- [ ] `booking-form`, `service-price-list`
-- [ ] `privacy-policy`, `permission-request`
-- [ ] Test: mọi block trong registry đều parse được `defaultProps` bằng chính `propsSchema` của nó
-- [ ] Ghép thử với generator phase-02: sinh app có đủ 10 block → `zmp start` chạy
+- [x] `BlockManifest` + `registry.ts` + test
+- [x] `zalo-bridge.ts` bản thật + bản mock
+- [x] Block `banner` trọn gói (làm mẫu cho phần còn lại)
+- [x] `rich-text`, `image-gallery`, `contact-info`, `map-location`
+- [x] `product-list`, `product-detail`, `cart-button`
+- [x] `booking-form`, `service-price-list`
+- [x] `privacy-policy`, `permission-request`
+- [x] Test: mọi block trong registry đều parse được `defaultProps` bằng chính `propsSchema` của nó
+- [x] Ghép thử với generator phase-02: sinh app có đủ 10 block → `zmp start` chạy
 
 ## Tiêu chí hoàn thành
 

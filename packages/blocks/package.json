@@ -1,5 +1,5 @@
 {
-  "name": "@zalo-builder/generator",
+  "name": "@zalo-builder/blocks",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "@zalo-builder/schema": "*",
-    "@zalo-builder/blocks": "*"
+    "zod": "^3.23.8"
   }
 }

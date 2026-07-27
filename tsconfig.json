@@ -3,12 +3,17 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "paths": {
+      "@zalo-builder/schema": ["./packages/schema"],
+      "@zalo-builder/blocks": ["./packages/blocks"]
+    }
   },
   "include": ["packages/**/*"]
 }

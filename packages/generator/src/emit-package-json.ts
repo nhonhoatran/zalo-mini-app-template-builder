@@ -25,12 +25,17 @@ export function emitPackageJson(
   for (const [depName, reqVersion] of Object.entries(extraDependencies)) {
     const existingVersion = pkg.dependencies[depName];
     if (existingVersion && existingVersion !== reqVersion) {
-      // Check if versions conflict drastically
-      throw new Error(
-        `Version conflict detected for dependency "${depName}": base project uses "${existingVersion}" but block requires "${reqVersion}".`
-      );
+      // Extract major version numbers if possible
+      const getMajor = (v: string) => v.replace(/[^0-9.]/g, "").split(".")[0];
+      if (getMajor(existingVersion) !== getMajor(reqVersion)) {
+        throw new Error(
+          `Version conflict detected for dependency "${depName}": base project uses "${existingVersion}" but block requires "${reqVersion}".`
+        );
+      }
     }
-    pkg.dependencies[depName] = reqVersion;
+    if (!existingVersion) {
+      pkg.dependencies[depName] = reqVersion;
+    }
   }
 
   return {
