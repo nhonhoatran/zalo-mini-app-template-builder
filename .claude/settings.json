@@ -1,0 +1,232 @@
+{
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Read(//Applications/**)",
+      "Bash(mdfind \"kMDItemDisplayName == ''''Docker''''\")",
+      "Bash(nc -z localhost 5432)",
+      "Bash(nc -z localhost 5433)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/dashboard/auto-reply -type f)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/dashboard/auto-reply -type f -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.jsx\" -o -name \"*.js\")",
+      "Bash(ls /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/dashboard/)",
+      "Bash(grep -r messenger apps/web/src --include=*.ts --include=*.tsx)",
+      "Bash(sips -g pixelWidth -g pixelHeight apps/web/public/logo.png)",
+      "Bash(sips -z 512 512 apps/web/src/app/icon.png --out apps/web/src/app/icon.png)",
+      "Bash(sips -z 180 180 apps/web/src/app/apple-icon.png --out apps/web/src/app/apple-icon.png)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:goclaw.org)",
+      "WebFetch(domain:docs.goclaw.sh)",
+      "WebFetch(domain:developers.zalo.me)",
+      "WebFetch(domain:docs.openclaw.ai)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(auth\\\\\\) -type f)",
+      "Bash(ls -la /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(auth\\\\\\)/register/)",
+      "Bash(cat /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(auth\\\\\\)/register/page.tsx)",
+      "Bash(grep -E \"\\\\.\\(ts|tsx\\)$\")",
+      "Bash(ls -la /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(marketing\\\\\\)/)",
+      "Bash(cat /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(marketing\\\\\\)/page.tsx)",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/skills/markdown-novel-viewer/scripts/server.cjs --file \"/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/visuals/login-review-analysis.md\" --host 0.0.0.0 --open --foreground)",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/scripts/set-active-plan.cjs /Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/260331-1126-login-fix-enhance)",
+      "Bash(pnpm --filter @repo/web typecheck)",
+      "Bash(grep -n \"<button\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(auth\\\\\\)/login/page.tsx)",
+      "Bash(grep -rn \"<button\\\\|<input\\\\|<textarea\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app/[locale]/\\\\\\(auth\\\\\\)/register/page.tsx)",
+      "Bash(node .claude/skills/markdown-novel-viewer/scripts/server.cjs --file \"/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/visuals/ui-component-usage-analysis.md\" --host 0.0.0.0 --open --foreground)",
+      "Bash(node .claude/skills/markdown-novel-viewer/scripts/server.cjs --stop)",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/scripts/set-active-plan.cjs plans/260331-1142-shadcn-ui-refactor)",
+      "Bash(pnpm add:*)",
+      "Bash(mkdir -p /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/ui/custom)",
+      "Bash(mv modal.tsx drawer.tsx select.tsx confirm-modal.tsx custom-checkbox.tsx loading-overlay.tsx toast-provider.tsx custom/)",
+      "Bash(xargs sed:*)",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(npx shadcn@latest add button input textarea label -y --overwrite)",
+      "Bash(npx shadcn@latest add card badge tabs tooltip switch avatar dialog sheet select alert-dialog checkbox separator accordion -y --overwrite)",
+      "Bash(node build.mjs)",
+      "Bash(zip -r ../../apps/web/public/downloads/auto-affiliate-bridge.zip manifest.json src/popup.html src/popup.css dist/ -x \"*.map\")",
+      "Bash(zip -r /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/public/downloads/auto-affiliate-bridge.zip manifest.json src/popup.html src/popup.css dist/ -x \"*.map\")",
+      "Bash(unzip -l /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/public/downloads/auto-affiliate-bridge.zip)",
+      "Bash(pnpm --filter @repo/web build)",
+      "Bash(wc -l apps/api/src/modules/**/*.ts)",
+      "Bash(wc -l apps/web/src/components/**/*.tsx)",
+      "Bash(find apps/api/src/modules -name \"*.spec.ts\" -exec wc -l {} +)",
+      "Bash(find apps/api/src/modules -name \"*.ts\" ! -name \"*.spec.ts\" -exec wc -l {} +)",
+      "Read(//Users/trungphan/Desktop/WorkSpace/auto-affiliate/**)",
+      "Bash(find apps/web/src -name \"*.tsx\" -exec wc -l {} +)",
+      "Bash(find apps/api/src/modules -name *.module.ts -exec cat {} +)",
+      "Bash(find apps/api/src -name *.ts ! -name *.spec.ts -exec grep -l findFirst {} +)",
+      "Bash(find apps/web/src -name api* -type f)",
+      "Bash(ls apps/web/src/components/ui/*.tsx)",
+      "Bash(ls apps/web/src/components/ui/custom/*.tsx)",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/scripts/set-active-plan.cjs /Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/260331-1305-codebase-health-round2)",
+      "Bash(pnpm --filter @repo/api add helmet @nestjs/throttler)",
+      "Bash(wc -l docs/*.md)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src -type f \\\\\\(-name *.tsx -o -name *.ts \\\\\\))",
+      "Bash(echo $?)",
+      "Bash(wc -l /Users/trungphan/Desktop/WorkSpace/auto-affiliate/docs/*.md)",
+      "Bash(git diff:*)",
+      "Bash(node .claude/scripts/validate-docs.cjs docs/)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src -name \"*.ts\" ! -name \"*.spec.ts\" ! -name \"*.dto.ts\" ! -name \"*.types.ts\" -exec wc -l {} +)",
+      "Bash(pnpm --filter @repo/api test -- --coverage --silent)",
+      "Bash(pnpm --filter @repo/api test -- --coverage)",
+      "Bash(pnpm --filter @repo/api typecheck)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" 'https://api.aff.autocontent.click/api/notifications/events?tenantId=f9cddac5-9fc9-4248-b2e2-2f028ef464db' -H 'Accept: text/event-stream' --max-time 5)",
+      "Bash(curl -s -I 'https://api.aff.autocontent.click/api/health')",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/scripts/set-active-plan.cjs /Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/260331-1348-codebase-health-round3)",
+      "Bash(node .claude/scripts/set-active-plan.cjs plans/260331-1417-codebase-health-round4)",
+      "Bash(pnpm --filter @repo/api test -- --listTests)",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/scripts/set-active-plan.cjs plans/260331-1417-codebase-health-round4)",
+      "Bash(node .claude/skills/markdown-novel-viewer/scripts/server.cjs --file \"/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/visuals/batch-editing-tiktok-music-review.md\" --host 0.0.0.0 --open --foreground)",
+      "Bash(pnpm typecheck:*)",
+      "Bash(pnpm --filter @repo/api test -- --testPathPattern=\"publish-post.processor|schedule-checker.processor\")",
+      "Bash(pnpm --filter @repo/web exec tsc --noEmit --pretty)",
+      "Bash(pnpm --filter @repo/api test -- --testPathPattern=\"publish-post.processor.spec\")",
+      "Bash(pnpm --filter @repo/api test:cov)",
+      "Bash(pnpm --filter @repo/api test:coverage)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src -name *.ts ! -name *.spec.ts ! -name *.dto.ts ! -name *.module.ts -exec wc -l {} +)",
+      "Read(//Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/**)",
+      "Bash(node /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/scripts/validate-docs.cjs docs/)",
+      "Read(//Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src/modules/**)",
+      "Bash(grep -n 'throw new' /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src/modules/google-flow/services/*.ts)",
+      "Bash(grep -n \"throw new\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src/modules/google-flow/*.ts)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components -name \"*.tsx\" -exec grep -l \"useTranslations\" {})",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components -name \"*.tsx\" ! -exec grep -l \"useTranslations\" {})",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app -name \"*.tsx\" ! -exec grep -l \"useTranslations\" {})",
+      "Bash(grep -l \"I18nContext\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src/modules/social/*.ts)",
+      "Bash(find /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/app -type f -name \"*.tsx\" ! -exec grep -l \"useTranslations\\\\|''''use client''''\" {})",
+      "Bash(node -e \":*)",
+      "Bash(grep -L \"useTranslations\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/publishing/*.tsx)",
+      "Bash(grep -L \"useTranslations\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/products/*.tsx)",
+      "Bash(grep -L \"useTranslations\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/settings/*.tsx)",
+      "Bash(grep -L \"useTranslations\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/dashboard/*.tsx)",
+      "Bash(grep -L \"useTranslations\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/posts/*.tsx)",
+      "Bash(grep -n \"title:\\\\|placeholder:\\\\|label:\\\\|toast\\(\\\\|''''[A-Z][a-zA-Z ]*'''':\\\\|[A-Z][a-zA-Z ]*:\" /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/publishing/*.tsx)",
+      "Bash(/tmp/extract_strings.sh:*)",
+      "Bash(chmod +x /tmp/extract_strings.sh)",
+      "Bash(/tmp/extract_strings.sh)",
+      "Bash(/tmp/hardcoded_strings_report.md:*)",
+      "Bash(__NEW_LINE_c048d90060f29475__ cat:*)",
+      "Bash(/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/reports/Explore-260331-1613-hardcoded-i18n-strings.md:*)",
+      "Bash(__NEW_LINE_e5349ade7f9311e3__ cat:*)",
+      "Bash(/tmp/summary.txt:*)",
+      "Bash(pnpm --filter @repo/api exec tsc --noEmit --pretty)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(wc -l /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/components/notification/*.tsx /Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/web/src/hooks/use-notification*.ts)",
+      "WebFetch(domain:docs.claudekit.cc)",
+      "Bash(gh repo:*)",
+      "Bash(ls -d /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/*/)",
+      "Bash(mkdir -p /tmp/ck-backup)",
+      "Bash(cp /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/settings.json /tmp/ck-backup/settings.json)",
+      "Bash(cp /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/settings.local.json /tmp/ck-backup/settings.local.json)",
+      "Bash(cp /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/.ck.json /tmp/ck-backup/.ck.json)",
+      "Bash(cp /Users/trungphan/Desktop/WorkSpace/auto-affiliate/.claude/.ckignore /tmp/ck-backup/.ckignore)",
+      "Bash(pnpm audit:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans",
+      "/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/260331-1142-shadcn-ui-refactor/reports",
+      "/tmp",
+      "/Users/trungphan/Desktop/WorkSpace/auto-affiliate/plans/reports",
+      "/Users/trungphan/Desktop/WorkSpace/auto-affiliate/apps/api/src/modules/social/jobs"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-init.cjs"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/subagent-init.cjs"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "Plan",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/cook-after-plan-reminder.cjs"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/dev-rules-reminder.cjs"
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/usage-context-awareness.cjs",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/descriptive-name.cjs"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Glob|Grep|Read|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/scout-block.cjs"
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/privacy-block.cjs"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-edit-simplify-reminder.cjs"
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/usage-context-awareness.cjs"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node \"$CLAUDE_PROJECT_DIR\"/.claude/statusline.cjs",
+    "padding": 0
+  }
+}

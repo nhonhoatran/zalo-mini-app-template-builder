@@ -1,0 +1,13 @@
+{
+  "name": "@zalo-builder/schema",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./builder-schema.ts",
+  "exports": {
+    ".": "./builder-schema.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}
