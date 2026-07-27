@@ -14,6 +14,7 @@
       "@zalo-builder/schema": ["./packages/schema"],
       "@zalo-builder/blocks": ["./packages/blocks"],
       "@zalo-builder/generator": ["./packages/generator"],
+      "@zalo-builder/compliance": ["./packages/compliance"],
       "zmp-ui": ["./packages/blocks/src/shared/mock-zmp-ui.tsx"]
     }
   },

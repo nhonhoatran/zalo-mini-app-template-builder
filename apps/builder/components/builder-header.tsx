@@ -3,18 +3,21 @@
 import React, { useState } from "react";
 import JSZip from "jszip";
 import { generateProject } from "@zalo-builder/generator";
+import { runComplianceCheck } from "@zalo-builder/compliance";
 import { useBuilderStore } from "../store/builder-store";
 import { AppSettingsModal } from "./app-settings-modal";
 import { PageManager } from "./page-manager/page-manager";
+import { ComplianceModal } from "./compliance/compliance-modal";
 import {
   Undo2,
   Redo2,
   Download,
   Settings,
-  Sparkles,
   RotateCcw,
   CheckCircle2,
   Loader2,
+  ShieldCheck,
+  ShieldAlert,
 } from "lucide-react";
 
 export function BuilderHeader() {
@@ -26,8 +29,11 @@ export function BuilderHeader() {
   const resetToDefault = useBuilderStore((state) => state.resetToDefault);
 
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isComplianceOpen, setIsComplianceOpen] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportSuccess, setExportSuccess] = useState(false);
+
+  const complianceReport = runComplianceCheck(config);
 
   const handleExportZip = async () => {
     try {
@@ -112,8 +118,36 @@ export function BuilderHeader() {
           <PageManager />
         </div>
 
-        {/* Right: Actions (Undo/Redo/Reset/Export) */}
+        {/* Right: Actions (Compliance Check / Undo / Redo / Reset / Export) */}
         <div className="flex items-center gap-2">
+          {/* Button: Compliance Check / Inspection */}
+          <button
+            type="button"
+            onClick={() => setIsComplianceOpen(true)}
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 border transition ${
+              complianceReport.passed
+                ? "bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100"
+                : "bg-rose-50 text-rose-700 border-rose-200 hover:bg-rose-100"
+            }`}
+            title="Kiểm tra các quy định duyệt Zalo Mini App"
+          >
+            {complianceReport.passed ? (
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            ) : (
+              <ShieldAlert className="w-4 h-4 text-rose-600" />
+            )}
+            <span>Kiểm duyệt Zalo</span>
+            <span
+              className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                complianceReport.passed
+                  ? "bg-emerald-200 text-emerald-800"
+                  : "bg-rose-200 text-rose-800"
+              }`}
+            >
+              {complianceReport.passed ? "Sạch" : `${complianceReport.errorsCount} lỗi`}
+            </span>
+          </button>
+
           <div className="flex items-center bg-slate-100 rounded-lg p-0.5 border border-slate-200">
             <button
               type="button"
@@ -176,6 +210,7 @@ export function BuilderHeader() {
       </header>
 
       <AppSettingsModal isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} />
+      <ComplianceModal isOpen={isComplianceOpen} onClose={() => setIsComplianceOpen(false)} />
     </>
   );
 }

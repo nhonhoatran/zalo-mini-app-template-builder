@@ -1,6 +1,6 @@
 # Phase 05 — Validator kiểm duyệt
 
-**Ưu tiên:** Cao nhất về mặt kinh doanh | **Trạng thái:** ⬜ Chưa làm | **Ước lượng:** 2–3 ngày
+**Ưu tiên:** Cao nhất về mặt kinh doanh | **Trạng thái:** ✅ Hoàn thành | **Ước lượng:** 2–3 ngày
 
 Liên kết: [plan.md](plan.md) · [research/zalo-platform-findings.md](research/zalo-platform-findings.md) mục 3
 
@@ -93,19 +93,21 @@ export const appNameFormat: ComplianceRule = {
 5. `manual-checklist.ts` — danh sách tĩnh, tích tay được
 6. Panel kết quả trong giao diện: nhóm theo mức, bấm là nhảy tới block
 7. `emit-markdown-report.ts`
-8. **Mốc M3:** cố tình dựng app vi phạm cả 9 luật → validator bắt đủ 9
+8. **Ưu tiên:** Cao nhất về mặt kinh doanh | **Trạng thái:** ✅ Hoàn thành | **Ước lượng:** 2–3 ngày
+
+---
 
 ## Todo
 
-- [ ] `rule-type.ts` + `run-compliance-check.ts` + test
-- [ ] ZMA-006 + test
-- [ ] ZMA-001 → ZMA-005, mỗi luật kèm test có ca đúng và ca sai
-- [ ] ZMA-007, ZMA-008 + test
-- [ ] ZMA-009 checklist tích tay
-- [ ] Panel kết quả + bấm nhảy tới block
-- [ ] Xuất báo cáo markdown
-- [ ] **Mốc M3** đạt
-- [ ] Viết `docs/compliance-rules.md` giải thích từng mã lỗi — vừa là tài liệu vừa là nội dung SEO
+- [x] `rule-type.ts` + `run-compliance-check.ts` + test
+- [x] ZMA-006 + test
+- [x] ZMA-001 → ZMA-005, mỗi luật kèm test có ca đúng và ca sai
+- [x] ZMA-007, ZMA-008 + test
+- [x] ZMA-009 checklist tích tay
+- [x] Panel kết quả + bấm nhảy tới block
+- [x] Xuất báo cáo markdown
+- [x] **Mốc M3** đạt
+- [x] Viết `docs/compliance-rules.md` giải thích từng mã lỗi — vừa là tài liệu vừa là nội dung SEO
 
 ## Tiêu chí hoàn thành
 
